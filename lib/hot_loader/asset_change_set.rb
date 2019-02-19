@@ -11,7 +11,7 @@ module React
 
         # initialize with a path and time
         # to find files which changed since that time
-        def initialize(since:, path: ::Rails.root.join("app/assets"))
+        def initialize(since:, path: ::Rails.root.join("app/javascript"))
           @since = since
           @path = path.to_s
           asset_glob = File.join(path, AssetChangeSet.asset_glob)
